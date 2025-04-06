@@ -42,7 +42,7 @@ const ContactForm = () => {
     if (id) {
       const fetchContact = async () => {
         try {
-          const response = await axios.get(`http://localhost:5000/api/contacts/${id}`);
+          const response = await axios.get(`https://contactbook-backend-i42d.onrender.com/api/contacts/${id}`);
           setFormData({
             name: response.data.name,
             phone: response.data.phone,
@@ -121,10 +121,10 @@ const ContactForm = () => {
       };
   
       if (id) {
-        await axios.put(`http://localhost:5000/api/contacts/${id}`, formDataToSend, config);
+        await axios.put(`https://contactbook-backend-i42d.onrender.com/api/contacts/${id}`, formDataToSend, config);
         toast.success('Contact updated successfully!');
       } else {
-        await axios.post('http://localhost:5000/api/contacts', formDataToSend, config);
+        await axios.post('https://contactbook-backend-i42d.onrender.com/api/contacts', formDataToSend, config);
         toast.success('Contact created successfully!');
       }
       navigate('/');

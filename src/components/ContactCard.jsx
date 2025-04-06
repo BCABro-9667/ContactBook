@@ -16,7 +16,7 @@ const ContactCard = ({ contact, onEdit, onDelete }) => {
     if (!contact.photo) return 'https://i.pravatar.cc/150?img=3';
     if (contact.photo.startsWith('http')) return contact.photo;
     if (contact.photo.startsWith('data:image')) return contact.photo;
-    return `http://localhost:5000${contact.photo}`;
+    return `https://contactbook-backend-i42d.onrender.com${contact.photo}`;
   };
 
   // Handle phone click (initiate call)

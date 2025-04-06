@@ -28,7 +28,7 @@ const ContactList = () => {
   useEffect(() => {
     const fetchContacts = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/contacts", {
+        const response = await axios.get("https://contactbook-backend-i42d.onrender.com/api/contacts", {
           params: { search: searchTerm },
         });
         setContacts(response.data);
@@ -49,7 +49,7 @@ const ContactList = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/contacts/${id}`);
+      await axios.delete(`https://contactbook-backend-i42d.onrender.com/api/contacts/${id}`);
       setContacts(contacts.filter((contact) => contact._id !== id));
       toast.success("Contact deleted successfully!");
     } catch (error) {
