@@ -1,0 +1,184 @@
+/* Base Styles */
+:root {
+  --primary-color: #1976D2;
+  --primary-hover: #1976D2;
+  --text-color: #333;
+  --text-secondary: #666;
+  --background: #f9fafb;
+  --card-bg: #ffffff;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: "Poppins", sans-serif !important;
+  background-color: var(--background);
+  color: var(--text-color);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Layout */
+.home-container {
+  /* max-width: 1200px; */
+  /* margin: 0 auto; */
+  /* padding: 1rem 2rem; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  background-color: #1976D2;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.home-header  h1{
+  color: white;
+  font-family: "Lilita One", sans-serif !important;
+
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  /* margin-bottom: -20px; */
+}
+
+.home-footer {
+  text-align: center;
+  margin-top: auto;
+}
+
+/* Typography */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: white;
+  margin-top: 0.5rem;
+}
+
+/* Icons */
+.title-icon {
+  font-size: 1.8rem;
+}
+
+.home-footer{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin-top: -1px;
+}
+.card-icon-container {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(25, 118, 210, 0.1);
+  border-radius: 50%;
+}
+
+.card-icon {
+  font-size: 2rem;
+  color: #1976D2;
+}
+
+.button-icon {
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.footer-icon {
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Cards */
+.contact-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem 1.5rem;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+  border-top: 4px solid #1976D2;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(25, 118, 210, 0.15);
+}
+
+/* Buttons */
+.card-button {
+  background-color: #1976D2;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  transition: var(--transition);
+  font-family: "Poppins", sans-serif !important;
+
+  
+}
+
+.card-button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 2rem 1rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-card {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+}

@@ -1,0 +1,128 @@
+.contact-card {
+    --card-bg: #ffffff;
+    --primary-color: #4361ee;
+    --text-color: #2b2d42;
+    --secondary-text: #6c757d;
+    --border-radius: 12px;
+    --shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    --hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    --transition: all 0.3s ease;
+    --avatar-size: 56px;
+    
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    overflow: hidden;
+    max-width: 100%;
+    /* width: 500px !important; */
+    margin-bottom: 1.5rem;
+    font-family: "Poppins", sans-serif !important;
+
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.25rem 0;
+  }
+  
+  .card-avatar {
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+    margin-right: 1rem;
+  }
+  
+  .card-user-info {
+    flex: 1;
+  }
+  
+  .card-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0;
+  }
+  
+  .card-relation {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--secondary-text);
+    margin-top: 0.25rem;
+  }
+  
+  .card-relation-icon {
+    margin-right: 0.25rem;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+  }
+  
+  .card-actions {
+    display: flex;
+  }
+  
+  .action-btn {
+    padding: 0.5rem;
+    color: var(--secondary-text);
+    transition: var(--transition);
+  }
+  
+  .action-btn.edit:hover {
+    color: var(--primary-color);
+  }
+  
+  .action-btn.delete:hover {
+    color: #ef233c;
+  }
+  
+  .card-body {
+    padding: 1rem 1.25rem 1.25rem;
+  }
+  
+  .contact-info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+  }
+  
+  .contact-icon {
+    margin-right: 0.75rem;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    min-width: 20px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .contact-card {
+      --avatar-size: 48px;
+    }
+    
+    .css-hc95cp-MuiPaper-root-MuiCard-root{
+      width: 100%;
+    }
+    
+    .card-name {
+      font-size: 1rem;
+    }
+    
+    .contact-info-item {
+      font-size: 0.85rem;
+    }
+  }
+
+  .css-hc95cp-MuiPaper-root-MuiCard-root {
+    width: 750px !important;
+  }
